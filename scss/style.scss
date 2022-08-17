@@ -209,7 +209,8 @@ a {
 }
 
 .cards-list {
-  
+  display: flex;
+  justify-content: space-between;
 
   &__card {
     display: flex;
@@ -219,6 +220,12 @@ a {
     border: 1px solid #F2F2F2;
     box-shadow: -8px -8px 15px #FFFFFF, 8px 8px 15px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
+    width: 315px;
+    margin-right: 20px;
+
+    &__card:nth-child(4n) {
+      margin-right: 0px;
+    }
     
     .image {
       background-color: #FFFFFF;
@@ -241,4 +248,37 @@ a {
       margin-bottom: 25px;
     }
   }
+}
+
+.card_form {
+
+  &__radio {
+    
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    @include font (500, 18px, 21px, #4F4F4F);
+  }
+
+  &__radio--1w {
+    border: 1px solid #3ECF5E;
+    border-radius: 5px;
+    color: #3ECF5E;
+    margin-right: 12px;
+    padding: 4px 12px;
+  }
+
+  &__radio--2w {
+    margin-right: 23px;
+  }
+
+  &__radio--3w {
+    margin-right: 31px;
+  }
+
+  
 }
