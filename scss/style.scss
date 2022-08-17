@@ -1,12 +1,158 @@
 @import "./fonts";
 
-p {
+$mainFontColor: #000000;
+
+@mixin font ($fw, $fs, $lh, $col) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  color: $col;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
   margin: 0px;
-  color: red;
-  margin-right: 1px;
+}
+
+.wrapper {
+  width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body {
   font-family: 'Gilroy';
   font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 130%;
+}
+
+a {
+  text-decoration: none;
+  // display: inline-block;
+}
+
+.header {
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.05), inset 0px -5px 15px rgba(255, 255, 255, 0.44);
+  padding-top: 48px;
+  padding-bottom: 15px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 42px;
+  }
+
+  &__contact_phone { 
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+  }
+
+  &__right_flex {
+    display: flex;
+    align-items: center;
+    font-size: 0;
+  }
+
+  &__logo-call {
+    margin-right: 11px;
+  }
+
+  &__number {
+    @include font (400, 18px, 21px, #000000)
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__buy {
+    position: relative;
+    margin-right: 15px;
+  }
+
+  &__buy_logo {
+    width: 25px;
+    height: 25px;
+  }
+
+  &__number-of-buy {
+    @include font (600, 12px, 15px, #FFFFFF);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #06D10E;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: 30%;
+    top: -40%;
+  }
+
+  &__account_logo {
+    width: 25px;
+    height: 25px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    position: relative;
+    font-size: 0;
+  }
+
+  &__link {
+    @include font (500, 18px, 21px, #4F4F4F);
+    margin-right: 40px;
+  }
+
+  &__link:last-child {
+    margin-right: 0px;
+  }
+
+  &__link--arrow::after {
+    content: "";
+    position: absolute;
+    left: 75px;
+    top: 8px;
+    background-image: url(../images/arrow_nav.svg);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__search {
+    display: inline-block;
+    outline: none;
+    background: #F2F2F2;
+    border: 1px solid #BDBDBD;
+    border-radius: 10px;
+    height: 54px;
+    width: 345px;
+  }
+
+  &__search::placeholder {
+    @include font (400, 18px, 21px, #828282);
+    font-family: 'Gilroy';
+    font-style: normal;
+    padding: 17px 273px 16px 20px;
+  }
+
+  &__search--img {
+    position: absolute;
+    right: 23px;
+    top: 25%;
+  }
 }

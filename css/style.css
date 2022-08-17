@@ -19,13 +19,142 @@
   font-style: normal;
   font-display: swap;
 }
-p {
+* {
+  box-sizing: border-box;
+  padding: 0px;
   margin: 0px;
-  color: red;
-  margin-right: 1px;
+}
+
+.wrapper {
+  width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body {
   font-family: "Gilroy";
   font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.05), inset 0px -5px 15px rgba(255, 255, 255, 0.44);
+  padding-top: 48px;
+  padding-bottom: 15px;
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 42px;
+}
+.header__contact_phone {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+}
+.header__right_flex {
+  display: flex;
+  align-items: center;
+  font-size: 0;
+}
+.header__logo-call {
+  margin-right: 11px;
+}
+.header__number {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.header__icons {
+  display: flex;
+  align-items: center;
+}
+.header__buy {
+  position: relative;
+  margin-right: 15px;
+}
+.header__buy_logo {
+  width: 25px;
+  height: 25px;
+}
+.header__number-of-buy {
   font-weight: 600;
-  font-size: 24px;
-  line-height: 130%;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #06D10E;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 30%;
+  top: -40%;
+}
+.header__account_logo {
+  width: 25px;
+  height: 25px;
+}
+.header__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav {
+  position: relative;
+  font-size: 0;
+}
+.header__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #4F4F4F;
+  margin-right: 40px;
+}
+.header__link:last-child {
+  margin-right: 0px;
+}
+.header__link--arrow::after {
+  content: "";
+  position: absolute;
+  left: 75px;
+  top: 8px;
+  background-image: url(../images/arrow_nav.svg);
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+}
+.header__form {
+  position: relative;
+}
+.header__search {
+  display: inline-block;
+  outline: none;
+  background: #F2F2F2;
+  border: 1px solid #BDBDBD;
+  border-radius: 10px;
+  height: 54px;
+  width: 345px;
+}
+.header__search::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #828282;
+  font-family: "Gilroy";
+  font-style: normal;
+  padding: 17px 273px 16px 20px;
+}
+.header__search--img {
+  position: absolute;
+  right: 23px;
+  top: 25%;
 }
