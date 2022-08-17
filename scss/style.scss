@@ -156,3 +156,24 @@ a {
     top: 25%;
   }
 }
+
+.main {
+  background-color: #F9F9F9;
+  padding-top: 90px;
+  padding-bottom: 100px;
+
+  &__menu:nth-child(odd)::after {
+    background: #BDBDBD;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin: 0 14px;
+  }
+
+  &__menu--links {
+    @include font (500, 18px, 21px,#BDBDBD);
+  }
+
+
+
+}
