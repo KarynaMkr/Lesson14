@@ -122,15 +122,20 @@ a {
 .header__link:last-child {
   margin-right: 0px;
 }
+.header__link--arrow {
+  margin-right: 60px;
+}
 .header__link--arrow::after {
   content: "";
-  position: absolute;
-  left: 75px;
-  top: 8px;
-  background-image: url(../images/arrow_nav.svg);
+  background-image: url("../images/arrow_nav.svg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 10px;
-  height: 10px;
+  height: 5px;
+  position: absolute;
+  margin-left: 7px;
+  top: 8px;
 }
 .header__form {
   position: relative;
@@ -189,7 +194,6 @@ a {
   color: #BDBDBD;
 }
 .main__button {
-  position: relative;
   display: flex;
   align-content: center;
   margin-bottom: 44px;
@@ -199,17 +203,18 @@ a {
   font-size: 20px;
   line-height: 24px;
   color: #333333;
-  margin-left: 20px;
 }
 .main__button--prev::before {
   content: "";
-  position: absolute;
-  left: 0px;
-  top: 25%;
-  background-image: url(../images/arrow_prev.svg);
+  background-image: url("../images/arrow_prev.svg");
   background-repeat: no-repeat;
-  width: 10px;
-  height: 15px;
+  background-position: center;
+  background-size: cover;
+  width: 6px;
+  height: 11px;
+  display: inline-block;
+  margin-right: 11px;
+  vertical-align: middle;
 }
 
 .cards-list {
@@ -305,4 +310,49 @@ a {
   border-radius: 10px;
   padding: 9px 10px;
   vertical-align: middle;
+}
+
+.slider-prev-next {
+  text-align: center;
+  font-size: 0px;
+}
+.slider-prev-next p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #828282;
+  display: inline-block;
+  margin-right: 20px;
+}
+.slider-prev-next p.checked {
+  font-weight: 700;
+  color: #219653;
+}
+.slider-prev-next p:last-child {
+  margin-right: 0px;
+}
+.slider-prev-next__pages {
+  display: inline-block;
+}
+.slider-prev-next__pages::before {
+  content: "";
+  background-image: url("../images/arrow_pre.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 6px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 30px;
+}
+.slider-prev-next__pages::after {
+  content: "";
+  background-image: url("../images/arrow_next.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 6px;
+  height: 12px;
+  display: inline-block;
+  margin-left: 30px;
 }
