@@ -1,6 +1,9 @@
 @import "./fonts";
 
 $mainFontColor: #000000;
+$mainBorderRadius: 10px;
+$smallBorderRadius: 5px;
+$bigBorderRadius: 20px;
 
 @mixin font ($fw, $fs, $lh, $col) {
   font-weight: $fw;
@@ -138,23 +141,28 @@ a {
     outline: none;
     background: #F2F2F2;
     border: 1px solid #BDBDBD;
-    border-radius: 10px;
+    border-radius: $mainBorderRadius;
     height: 54px;
     width: 345px;
+    padding: 17px 273px 16px 20px;
   }
 
   &__search::placeholder {
     @include font (400, 18px, 21px, #828282);
     font-family: 'Gilroy';
     font-style: normal;
-    padding: 17px 273px 16px 20px;
   }
 
-  &__search--img {
+  &__search--btn {
+    background: none;
+    border: none;
+    display: inline-block;
     position: absolute;
     right: 23px;
     top: 25%;
+    cursor: pointer;
   }
+
 }
 
 .main {
@@ -162,7 +170,6 @@ a {
   padding-top: 90px;
   padding-bottom: 100px;
   font-size: 0px;
-  margin-bottom: 30px;
 
   &__menu {
     margin-bottom: 30px;
@@ -211,6 +218,10 @@ a {
 .cards-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 46px;
+  column-gap: 20px;
+  margin-bottom: 50px;
 
   &__card {
     display: flex;
@@ -219,17 +230,12 @@ a {
     padding: 20px 20px 30px;
     border: 1px solid #F2F2F2;
     box-shadow: -8px -8px 15px #FFFFFF, 8px 8px 15px rgba(0, 0, 0, 0.05);
-    border-radius: 20px;
+    border-radius: $bigBorderRadius;
     width: 315px;
-    margin-right: 20px;
-
-    &__card:nth-child(4n) {
-      margin-right: 0px;
-    }
     
     .image {
       background-color: #FFFFFF;
-      border-radius: 10px;
+      border-radius: $mainBorderRadius;
       margin-bottom: 25px;
     }
 
@@ -251,34 +257,54 @@ a {
 }
 
 .card_form {
-
   &__radio {
-    
+    margin-bottom: 25px;
   }
 
-  input {
-    display: none;
+  &__radio--btn {
+    display: inline-block;
+    margin-right: 1px;
+
+    input {
+      display: none;
+    }
+
+    input:checked + label {
+      background-color: #FFFFFF;
+      border: 1px solid #3ECF5E;
+    }
+
+    label {
+      @include font (500, 18px, 21px, #4F4F4F);
+      display: inline-block;
+      cursor: pointer;
+      padding: 4px 12px;
+      border-radius: $smallBorderRadius;
+      user-select: none;
+    }
   }
 
-  label {
-    @include font (500, 18px, 21px, #4F4F4F);
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
   }
 
-  &__radio--1w {
-    border: 1px solid #3ECF5E;
-    border-radius: 5px;
-    color: #3ECF5E;
-    margin-right: 12px;
-    padding: 4px 12px;
+  &__btn {
+    @include font (500, 18px, 21px, #FFFFFF);
+    display: inline-block;
+    vertical-align: middle;
+    padding: 12px 32px;
+    background: #3FCF5E;
+    border: 1px solid rgba(5, 175, 52, 0.53);
+    border-radius: $mainBorderRadius;
   }
 
-  &__radio--2w {
-    margin-right: 23px;
+  &__btn--buy {
+    display: inline-block;
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    border-radius: $mainBorderRadius;
+    padding: 9px 10px;
+    vertical-align: middle;
   }
-
-  &__radio--3w {
-    margin-right: 31px;
-  }
-
-  
 }
