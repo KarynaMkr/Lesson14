@@ -1,0 +1,49 @@
+.footer {
+  background-color: #333333;
+  padding: 100px 0 129px 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .links {
+      font-size: 0px;
+    }
+
+    .links a{
+      @include font (500, 18px, 21px, #FFFFFF);
+      margin-right: 47px;
+    }
+
+    .links a:last-child {
+      margin-right: 0px;
+    }
+
+    .icons_social {
+      font-size: 0px;
+
+      a {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      a:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  &__phone-numb {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-call {
+    margin-right: 11px;
+  }
+
+  &__number {
+    @include font (500, 18px, 21px, #FFFFFF)
+  }
+}

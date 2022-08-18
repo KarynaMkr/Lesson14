@@ -356,3 +356,49 @@ a {
   display: inline-block;
   margin-left: 30px;
 }
+
+.footer {
+  background-color: #333333;
+  padding: 100px 0 129px 0;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__content .links {
+  font-size: 0px;
+}
+.footer__content .links a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  margin-right: 47px;
+}
+.footer__content .links a:last-child {
+  margin-right: 0px;
+}
+.footer__content .icons_social {
+  font-size: 0px;
+}
+.footer__content .icons_social a {
+  display: inline-block;
+  margin-right: 20px;
+}
+.footer__content .icons_social a:last-child {
+  margin-right: 0px;
+}
+.footer__phone-numb {
+  display: flex;
+  align-items: center;
+}
+.footer__logo-call {
+  margin-right: 11px;
+}
+.footer__number {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
