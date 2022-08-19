@@ -1,6 +1,7 @@
 
 .main {
   background-color: #F9F9F9;
+  background-size: cover;
   padding-top: 90px;
   padding-bottom: 100px;
   font-size: 0px;
@@ -45,6 +46,7 @@
 }
 
 .cards-list {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -82,6 +84,30 @@
       @include font (700, 22px, 27px, #333333);
       margin-bottom: 25px;
     }
+  }
+
+  &__card:nth-child(2)::after {
+    @include font (600, 14px, 16px, #FFFFFF);
+    position: absolute;
+    content: "Новинка";
+    display: inline-block;
+    background-color: #333333;
+    border-radius: $mainBorderRadius;
+    padding: 9px 16px;
+    right: 51.5%;
+    top: 12px;
+  }
+
+  &__card:nth-child(3)::after {
+    @include font (600, 14px, 16px, #FFFFFF);
+    position: absolute;
+    content: "Новинка";
+    display: inline-block;
+    background-color: #333333;
+    border-radius: $mainBorderRadius;
+    padding: 9px 16px;
+    right: 26%;
+    top: 12px;
   }
 }
 

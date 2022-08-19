@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Gilroy";
   src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
@@ -146,9 +147,8 @@ a {
   background: #F2F2F2;
   border: 1px solid #BDBDBD;
   border-radius: 10px;
-  height: 54px;
   width: 345px;
-  padding: 17px 273px 16px 20px;
+  padding: 17px 55px 16px 20px;
 }
 .header__search::placeholder {
   font-weight: 400;
@@ -170,6 +170,7 @@ a {
 
 .main {
   background-color: #F9F9F9;
+  background-size: cover;
   padding-top: 90px;
   padding-bottom: 100px;
   font-size: 0px;
@@ -218,6 +219,7 @@ a {
 }
 
 .cards-list {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -260,6 +262,34 @@ a {
   line-height: 27px;
   color: #333333;
   margin-bottom: 25px;
+}
+.cards-list__card:nth-child(2)::after {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  position: absolute;
+  content: "Новинка";
+  display: inline-block;
+  background-color: #333333;
+  border-radius: 10px;
+  padding: 9px 16px;
+  right: 51.5%;
+  top: 12px;
+}
+.cards-list__card:nth-child(3)::after {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  position: absolute;
+  content: "Новинка";
+  display: inline-block;
+  background-color: #333333;
+  border-radius: 10px;
+  padding: 9px 16px;
+  right: 26%;
+  top: 12px;
 }
 
 .card_form__radio {
